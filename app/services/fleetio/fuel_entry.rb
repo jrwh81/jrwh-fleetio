@@ -8,7 +8,6 @@ module Fleetio
     end
 
     def self.get(vehicle_id)
-      byebug
       response = Fleetio::Request.get("vehicles/#{vehicle_id}/fuel_entries")
       response_hash = response[0].to_h
       scoped_response = response_hash.slice("color")
