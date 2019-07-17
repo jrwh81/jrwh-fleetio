@@ -14,7 +14,7 @@ module Fleetio
     end
 
     def self.find(vin)
-      response = Fleetio::Request.get("vehicles?q[vin_eq]=#{vin}")
+      response = Request.get("vehicles?q[vin_eq]=#{vin}")
       response_hash = response[0].to_h
       scoped_response = response_hash.slice("color", "make", "model", "year", "name",
                                             "license_plate", "current_meter_value", "vin",
