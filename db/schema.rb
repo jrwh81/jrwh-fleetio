@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_07_16_045446) do
+ActiveRecord::Schema.define(version: 2019_07_17_194923) do
 
   create_table "active_admin_comments", force: :cascade do |t|
     t.string "namespace"
@@ -49,6 +49,12 @@ ActiveRecord::Schema.define(version: 2019_07_16_045446) do
     t.string "vin"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "group_name"
+    t.string "vehicle_status_color"
+    t.string "registration_state"
+    t.string "vehicle_status_name"
+    t.string "default_image_url_medium"
+    t.string "default_image_url_large"
   end
 
 end

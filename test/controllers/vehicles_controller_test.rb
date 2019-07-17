@@ -18,6 +18,21 @@ class VehiclesControllerTest < ActionDispatch::IntegrationTest
     assert_response 201
   end
 
+  # test "should search fleetio api for vehicle, create new vehicle from api" do
+  #   get find_by_vin_url(vin: "123")
+
+  #   assert_redirected_to(:controller => "vehicles", :action => "create")
+  # end
+
+  test "should search fleetio api for vehicle, return vehicle if already exists" do
+    get find_by_vin_url(vin: "MyString")
+    result_vehicle = JSON.parse(response.body.to_s)
+    
+    assert_equal(result_vehicle["vin"], @vehicle["vin"])
+    assert_response :found
+  end
+
+
   test "should show vehicle" do
     get vehicle_url(@vehicle), as: :json
     assert_response :success
