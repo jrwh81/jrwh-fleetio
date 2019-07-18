@@ -3,6 +3,7 @@ import axios from 'axios';
 import Vehicle from './Vehicle'
 import FindVehicleForm from './FindVehicleForm';
 import { Divider, Table } from 'semantic-ui-react';
+//import { useAlert } from 'react-alert';
 
 class VehiclesContainer extends Component {
 	constructor(props){
@@ -27,14 +28,11 @@ class VehiclesContainer extends Component {
 	}
 
 	findVehicle(vin){
-		console.log("VIN====="+vin)
 		axios.get( 'api/vehicles/find/' + vin)
 		.then(response => {
-			console.log(response)
 			const vehicles = response.data.vehicles
 			const message = response.data.message
-			console.log(vehicles)
-			console.log(message)
+			alert(message)
 			this.setState({vehicles})
 			this.setState({message})
 		})

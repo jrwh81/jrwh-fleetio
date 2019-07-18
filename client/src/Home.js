@@ -5,14 +5,14 @@ import './Home.css';
 import VehiclesContainer from './components/VehiclesContainer'
 import fleetio from './images/fleetio.png';
 
-class Home extends Component {  
-  render() {
+class Home extends Component {
+  render() { 
     return (
   <div>
     <Header id="topHeader">
       <Image src={fleetio} />
       Sample Work Website By John Hansen
-    </Header>
+    </Header>    
     <Container fluid>
       <Container fluid id="mainContent">
       <div id="vinSearch">

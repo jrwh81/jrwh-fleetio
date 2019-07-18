@@ -1,6 +1,5 @@
 import React from 'react';
-import { Divider, Icon, Table, Header, Button, Popup, Grid, Segment, Image } from 'semantic-ui-react';
-import fleetio from '../images/fleetio.png';
+import { Icon, Table, Popup, Grid, Image } from 'semantic-ui-react';
 
 const Vehicle = ({vehicle}) =>
   <Popup trigger={	
